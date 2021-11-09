@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModelTag"
+            type="com.example.tf_carmanutcontrol_gustavoantunes.MyViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".View.InsertFragment">
+
+        <EditText
+            android:id="@+id/editManut"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:hint="@string/manutDescription"
+            android:inputType="textPersonName"
+            android:text="@={viewModelTag.inputDescricao}"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtInsert" />
+
+        <TextView
+            android:id="@+id/txtInsert"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/insert"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/dateManut"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:hint="@string/manutDate"
+            android:inputType="date"
+            android:text="@={viewModelTag.inputData}"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editManut" />
+
+        <EditText
+            android:id="@+id/numberValueManut"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:hint="@string/manutValue"
+            android:inputType="number"
+            android:text="@={viewModelTag.inputValue}"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dateManut" />
+
+
+        <Button
+            android:id="@+id/btnList"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="80dp"
+            android:backgroundTint="@color/teal_700"
+            android:onClick="@{() -> viewModelTag.saveUpdate()}"
+            android:text="@{viewModelTag.saveUpdateBtnTxt}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/numberValueManut" />
+
+        <Button
+            android:id="@+id/btnSeeList"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="80dp"
+            android:backgroundTint="@color/teal_700"
+            android:text="@string/seeList"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnDelete" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="80dp"
+            android:backgroundTint="@color/teal_700"
+            android:onClick="@{() -> viewModelTag.clearOrDelete()}"
+            android:text="@{viewModelTag.clearDeleteBtnTxt}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnList" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

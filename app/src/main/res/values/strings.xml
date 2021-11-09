@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">TF_CarManutControl_GustavoAntunes</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title">Controle de Manutenção de Carro</string>
+    <string name="start">Iniciar</string>
+    <string name="insert">Preencha os campos abaixo, de acordo com a manutenção realizada em seu carro.</string>
+    <string name="manutDescription">Descrição</string>
+    <string name="manutDate">Data</string>
+    <string name="manutValue">Valor</string>
+    <string name="manutType">Tipo de Manutenção:</string>
+    <string name="manutTypeOption1">Preventiva</string>
+    <string name="manutTypeOption2">Corretiva</string>
+    <string name="manutTypeOption3">Acessórios</string>
+    <string name="list">Listar</string>
+    <string name="seeList">Ver Lista</string>
+    <string name="completeList">Lista de Manutenções:</string>
+    <string name="delete">Deletar</string>
+    <string name="clear">Limpar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="confirm">Confirmar</string>
+    <string name="removeManutQuestion">Tem certeza que deseja limpar a lista de manutenções</string>
+    <string name="removeManutWarning">Toda a lista de manutenções será perdida</string>
+    <string name="removeManut">Todas as manutenções foram removidas</string>
+    <string name="requiredInfo">É obrigatório preencher todos os campos</string>
+</resources>
